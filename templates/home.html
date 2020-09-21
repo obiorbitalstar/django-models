@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ Home page
+{% endblock title %}
+
+
+{% block header %}
+
+    <h1> Show me the meaning... <br>
+        of beiiing lonelyyyyyyyyyyyyyyyyy 
+    </h1>
+{% endblock header %}
+
+{% block body %}
+        {% for post in object_list%}
+        <li>
+            <a href="{%url 'post_details' post.pk %}">{{post.title}}</a>
+        
+        </li>
+        {% endfor %}
+{% endblock body %}
